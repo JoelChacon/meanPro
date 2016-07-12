@@ -1,0 +1,9 @@
+/** {
+	border:solid black 1px;
+}*/
+.test {
+	/*margin: 0 auto;*/
+	padding: 100px;
+	font: bold 50px/52px "Lato","Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: red;
+}
