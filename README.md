@@ -1,3 +1,1 @@
 # meanPro
-# meanProj
-# meanPro
