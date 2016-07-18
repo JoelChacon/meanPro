@@ -1,9 +1,10 @@
+//initiating an angularJS app
+					   //name of app//
 var app = angular.module('meanApp', []);
 
-
 app.controller("mainMeanCtrl", function($scope) {
-
-	$scope.posts = [
+			//array of objects//
+  /*#1*/$scope.posts = [
 
 		{title: 'post 1', upvotes: 5},
 		{title: 'post 2', upvotes: 2},
@@ -12,8 +13,9 @@ app.controller("mainMeanCtrl", function($scope) {
 		{title: 'post 5', upvotes: 4}
 
 	];
+	// begin function //
+  /*#2*/$scope.addPost = function() {
 
-	$scope.addPost = function() {
 		if(!$scope.title || $scope.title === '') {
 			return;
 		}
@@ -21,15 +23,14 @@ app.controller("mainMeanCtrl", function($scope) {
 			title: $scope.title,
 			link: $scope.link,
 			upvotes: 0
-		});
-		console.log($scope.link);
-
+		})
 		$scope.title = '';
 		$scope.link = '';
 
-	};
-	console.log($scope.posts);
-	$scope.incrementUpvotes = function(post) {
+		};
+		console.log($scope.posts);
+	// end function //
+  /*#3*/$scope.incrementUpvotes = function(post) {
 		post.upvotes += 1;
 	}
 

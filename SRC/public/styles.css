@@ -7,3 +7,28 @@
 	font: bold 50px/52px "Lato","Trebuchet MS", Arial, Helvetica, sans-serif;
 	color: red;
 }
+
+.glyphicon-thumbs-up { 
+	cursor: pointer;
+}
+
+.linkTitle {
+
+	font-size: 20px;
+	margin-left: 10px;
+
+}
+
+.formStyle {
+
+	margin-top: 30px;
+
+}
+
+.button1 {
+	
+	font-size: 19px;
+	margin-top: 10px;	
+	color:;
+
+}
