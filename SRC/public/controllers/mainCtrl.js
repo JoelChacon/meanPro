@@ -1,4 +1,4 @@
-app.controller("mainMeanCtrl", function($scope, $stateParams, postsFactory) {
+app.controller("mainMeanCtrl", function($scope, postsFactory) {
 			//array of objects//
  //  /*#1*/$scope.posts = [
 
