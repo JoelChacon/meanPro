@@ -7,10 +7,13 @@
 		<span class="glyphicon glyphicon-thumbs-up" 
 		ng-click="incrementUpvotes(post)"></span>
 		{{post.upvotes}}
-		<span class="linkTitle">	
+		<span class="fontLeft">	
 			<a ng-show="post.link" href="www.{{post.link}}" target="_blank"> 	{{post.title}} </a>
 			<span ng-hide="post.link"> {{post.title}} </span>
 		</span>	
+		<span>
+			<a ui-sref="posts({id: $index})">Comments</a>
+		</span>
 
 	</div>
 	<form ng-submit="addPost()" class="formStyle">

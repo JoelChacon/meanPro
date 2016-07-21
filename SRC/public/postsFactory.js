@@ -1,4 +1,4 @@
-app.factory("meanFactory", function() {
+app.factory("postsFactory", function() {
 
 	var factoryObj = {
 
@@ -11,7 +11,7 @@ app.factory("meanFactory", function() {
 		{title: 'post 5', upvotes: 4}
 
 		]
-		
+
 	};
 
 	return factoryObj

@@ -1,4 +1,4 @@
-app.controller("mainMeanCtrl", function($scope, meanFactory) {
+app.controller("mainMeanCtrl", function($scope, $stateParams, postsFactory) {
 			//array of objects//
  //  /*#1*/$scope.posts = [
 
@@ -9,7 +9,7 @@ app.controller("mainMeanCtrl", function($scope, meanFactory) {
 	// 	{title: 'post 5', upvotes: 4}
 
 	// ];
-/*#1.5*/$scope.posts = meanFactory.posts	
+/*#1.5*/$scope.posts = postsFactory.posts	
 	// begin function //
   /*#2*/$scope.addPost = function() {
 
@@ -19,7 +19,11 @@ app.controller("mainMeanCtrl", function($scope, meanFactory) {
 		$scope.posts.push({
 			title: $scope.title,
 			link: $scope.link,
-			upvotes: 0
+			upvotes: 0,
+			comments: [
+				{author: "Joe", body: 'Cool post!', upvotes: 0},
+    			{author: 'Bob', body: 'Great idea!', upvotes: 0}
+			]
 		})
 		$scope.title = '';
 		$scope.link = '';
