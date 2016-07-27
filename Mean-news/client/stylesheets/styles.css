@@ -1,0 +1,52 @@
+/** {
+	border:solid black 1px;
+}*/
+/*.test*/ {
+	/*margin: 0 auto;*/
+	padding: 100px;
+	font: bold 50px/52px "Lato","Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: red;
+}
+
+.glyphicon-thumbs-up { 
+	cursor: pointer;
+}
+
+.fontLeft {
+
+	font-size: 20px;
+	margin-left: 10px;
+
+}
+
+.formStyle {
+
+	margin-top: 30px;
+
+}
+
+.button1 {
+	
+	font-size: 19px;
+	margin-top: 10px;	
+	
+}
+
+.backGround {
+
+/*background: #4CA1AF;*/ /* fallback for old browsers */
+/*background: -webkit-linear-gradient(to left, #4CA1AF , #C4E0E5);  Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to left, #4CA1AF , #C4E0E5);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+background: #3CA55C; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #3CA55C , #B5AC49); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #3CA55C , #B5AC49); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */     
+
+}
+
+.margin {
+
+	margin-top: 30px;
+
+}
