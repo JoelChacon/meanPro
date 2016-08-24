@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -27,6 +28,9 @@ app.use(express.static(path.join(__dirname, 'client')));
 
 app.use('/', routes);
 app.use('/users', users);
+
+//connecting to local database
+mongoose.connect('mongodb://localhost/news')
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -71,7 +75,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3002');
+var port = normalizePort(process.env.PORT || '3004');
 app.set('port', port);
 app.listen(port, function() {
   console.log("I'm listening on port: " + port)
