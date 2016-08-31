@@ -16,11 +16,10 @@ var comments = require('./models/Comments');
 var app = express();
 
 //connecting to mongoose
-mongoose.createConnection('mongodb://localhost:27017/news', function(err) {
-    if(err) {
-      console.log(err);
-    }
-  
+var mongoUri = 'mongodb://localhost:27017/news';
+
+mongoose.createConnection( mongoUri, function() {
+     console.log("Connected to Mongo at " + mongoUri);
 });
 
 // view engine setupb
