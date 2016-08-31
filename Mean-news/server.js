@@ -1,21 +1,33 @@
+//requiring independencies
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var posts =  require('./models/posts');
+var comments = require('./models/Comments');
 
-
+//instantiate express
 var app = express();
 
-// view engine setup
-console.log("START LOADING VIEWS");
+//connecting to mongoose
+mongoose.createConnection('mongodb://localhost:27017/news', function(err) {
+    if(err) {
+      console.log(err);
+    }
+  
+});
+
+// view engine setupb
+
 app.set('views', path.join(__dirname, 'client/views'));
 app.set('view engine', 'ejs');
-console.log('FINISHED RENDERING');
+
 
 // uncomment after placing your favicon in /public
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
