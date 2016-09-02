@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 
-var PostSchema = new mongoose.Schema({
+var Schema = mongoose.Schema;
+
+var PostSchema = new Schema({
  
   	title: String,
   	link: String,
@@ -9,4 +11,4 @@ var PostSchema = new mongoose.Schema({
 
 });
 
-mongoose.model('Post', PostSchema);
+module.exports = mongoose.model('Post', PostSchema);
