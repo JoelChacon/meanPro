@@ -6,13 +6,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var router = express.Router();
+// var router = express.Router();
 
 //requiring files
-var routes = require('./routes/index');
-var users = require('./routes/users');
+// var routes = require('./routes/index');
+// var users = require('./routes/users');
 // var posts =  require('./models/posts');
-var comments = require('./models/Comments');
+// var comments = require('./models/Comments');
 var posts = require('./controllers/postsCtrl');
 
 //instantiate express
@@ -39,11 +39,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client')));
 
-app.use('/', routes);
-app.use('/users', users);
+// app.use('/', routes);
+// app.use('/users', users);
 
-////////endpoints////////
-app.post('/api/posts', posts.handlePost);
+////////ENDPOINTS////////
+app.post('/api/posts', posts.post);
+app.get('/api/posts', posts.getAll);
+app.get('/api/posts/:id', posts.getOne);
+
 
 //connecting to local databasep
 mongoose.connect('mongodb://localhost/news')
