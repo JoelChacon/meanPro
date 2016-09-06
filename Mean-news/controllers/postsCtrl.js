@@ -30,9 +30,20 @@ var handleFindOne = function(req, res) {
 		}
 	})
 }
+////
+var handlePut = function(req, res) {
+	Posts.findByIdAndUpdate(req.params.id, req.body, function(error, post) {
+		if(error) {
+			res.status(500).json(error);
+		} else {
+			res.json(post);
+		}
+	})
+}
 
 module.exports = {
 	post: handlePost,
 	getAll: handleGetAll,
-	getOne: handleFindOne
+	getOne: handleFindOne,
+	putOne: handlePut
 };

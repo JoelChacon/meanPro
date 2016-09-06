@@ -46,6 +46,7 @@ app.use(express.static(path.join(__dirname, 'client')));
 app.post('/api/posts', posts.post);
 app.get('/api/posts', posts.getAll);
 app.get('/api/posts/:id', posts.getOne);
+app.put('/api/posts/:id', posts.putOne);
 
 
 //connecting to local databasep
