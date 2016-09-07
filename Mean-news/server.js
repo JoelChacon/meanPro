@@ -46,10 +46,10 @@ app.use(express.static(path.join(__dirname, 'client')));
 app.post('/api/posts', posts.post);
 app.get('/api/posts', posts.getAll);
 app.get('/api/posts/:id', posts.getOne);
-app.put('/api/posts/:id', posts.putOne);
+app.put('/api/posts/:id/upvotes', posts.putOne);
 
 
-//connecting to local databasep
+//connecting to local database
 mongoose.connect('mongodb://localhost/news')
 
 // catch 404 and forward to error handler

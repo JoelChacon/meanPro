@@ -2,7 +2,7 @@ var Posts = require('../models/posts');
 
 var handlePost = function(req, res) {
 	Posts.create(req.body, function(error, post) {
-		console.log("response", post);
+		// console.log("response", post);
 		if(error) {
 			res.status(500).json(error)
 		} else {
@@ -31,8 +31,10 @@ var handleFindOne = function(req, res) {
 	})
 }
 ////
-var handlePut = function(req, res) {
+var handlePut = function(req, res, next) {
+	// console.log(req);
 	Posts.findByIdAndUpdate(req.params.id, req.body, function(error, post) {
+		post.upvote();
 		if(error) {
 			res.status(500).json(error);
 		} else {
@@ -40,6 +42,7 @@ var handlePut = function(req, res) {
 		}
 	})
 }
+// console.log(Posts)
 
 module.exports = {
 	post: handlePost,
